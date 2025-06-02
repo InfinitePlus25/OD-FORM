@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mVAS Brief Request Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px 20px;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-container img {
+      display: block;
+      max-width: 180px;
+      margin: 0 auto 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #46AFCC;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #359bb3;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <!-- Logo Placeholder -->
+    <img src="logo.png" alt="Company Logo" />
+
+    <h2>mVAS Brief Request Form</h2>
+    <form action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST">
+      <!-- Prevent spam -->
+      <input name="_formsubmit_id" type="text" style="display:none">
+
+      <label for="name">Your Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="company">Affiliate/Company Name</label>
+      <input type="text" id="company" name="company">
+
+      <label for="country">Target Country*</label>
+      <input type="text" id="country" name="country" required>
+
+      <label>Service Type*</label>
+      <input type="checkbox" name="service" value="Direct Carrier Billing"> Direct Carrier Billing<br>
+      <input type="checkbox" name="service" value="Subscription Portal"> Subscription Portal<br>
+      <input type="checkbox" name="service" value="One-click Flow"> One-click Flow<br>
+      <input type="checkbox" name="service" value="IVR/SMS"> IVR/SMS<br>
+      <input type="checkbox" name="service" value="Other"> Other
+
+      <label for="description">Service Description</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <label>Preferred Billing Type</label>
+      <input type="radio" name="billing" value="Daily"> Daily<br>
+      <input type="radio" name="billing" value="Weekly"> Weekly<br>
+      <input type="radio" name="billing" value="One-Time"> One-Time<br>
+      <input type="radio" name="billing" value="Other"> Other
+
+      <label for="start-date">Start Date</label>
+      <input type="date" id="start-date" name="start-date">
+
+      <label>Creatives Provided?</label>
+      <input type="radio" name="creatives" value="Yes"> Yes<br>
+      <input type="radio" name="creatives" value="No"> No
+
+      <label for="link">Landing Page or Store Link</label>
+      <input type="text" id="link" name="link">
+
+      <label for="notes">Special Notes or Instructions</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+
+      <button type="submit">Submit Brief</button>
+    </form>
+  </div>
+
+</body>
+</html>
