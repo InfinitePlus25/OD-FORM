@@ -116,9 +116,10 @@
       ✅ Thank you! Your brief has been submitted successfully.
     </div>
 
-    <form id="briefForm" action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST" enctype="multipart/form-data">
-      <!-- Hidden spam trap -->
-      <input name="_formsubmit_id" type="text" style="display:none">
+    <form id="briefForm" action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST" enctype="multipart/form-data" autocomplete="off">
+      <!-- Improved hidden spam trap -->
+      <input name="_formsubmit_id" type="text" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;">
+      
       <!-- Redirect to same page with anchor -->
       <input type="hidden" name="_redirect" value="https://infiniteplus25.github.io/OD-FORM/#successMessage">
 
@@ -161,7 +162,7 @@
       <input type="text" id="link" name="link">
 
       <label for="attachment">Upload Brief/Mockups</label>
-      <input type="file" id="attachment" name="attachment">
+      <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
 
       <label for="notes">Special Notes or Instructions</label>
       <textarea id="notes" name="notes" rows="4"></textarea>
