@@ -43,6 +43,7 @@
     input[type="text"],
     input[type="email"],
     input[type="date"],
+    input[type="file"],
     textarea,
     select {
       width: 100%;
@@ -80,6 +81,17 @@
       background-color: #359bb3;
     }
 
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
     @media (max-width: 600px) {
       .form-container {
         margin: 20px;
@@ -99,9 +111,16 @@
     <img src="logo.png" alt="Company Logo" />
 
     <h2>mVAS Brief Request Form</h2>
-    <form action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST">
-      <!-- Prevent spam -->
+
+    <div class="success-message" id="successMessage">
+      ✅ Thank you! Your brief has been submitted successfully.
+    </div>
+
+    <form id="briefForm" action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST" enctype="multipart/form-data">
+      <!-- Hidden spam trap -->
       <input name="_formsubmit_id" type="text" style="display:none">
+      <!-- Redirect to same page with anchor -->
+      <input type="hidden" name="_redirect" value="https://infiniteplus25.github.io/OD-FORM/#successMessage">
 
       <label for="name">Your Name*</label>
       <input type="text" id="name" name="name" required>
@@ -141,12 +160,23 @@
       <label for="link">Landing Page or Store Link</label>
       <input type="text" id="link" name="link">
 
+      <label for="attachment">Upload Brief/Mockups</label>
+      <input type="file" id="attachment" name="attachment">
+
       <label for="notes">Special Notes or Instructions</label>
       <textarea id="notes" name="notes" rows="4"></textarea>
 
       <button type="submit">Submit Brief</button>
     </form>
   </div>
+
+  <script>
+    window.onload = function () {
+      if (window.location.href.includes("#successMessage")) {
+        document.getElementById("successMessage").style.display = "block";
+      }
+    };
+  </script>
 
 </body>
 </html>
