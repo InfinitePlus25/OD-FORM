@@ -1,4 +1,4 @@
-html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -107,7 +107,6 @@ html>
 <body>
 
   <div class="form-container">
-    <!-- Logo Placeholder -->
     <img src="images/logo.png" alt="Company Logo" />
 
     <h2>mVAS Brief Request Form</h2>
@@ -116,11 +115,12 @@ html>
       ✅ Thank you! Your brief has been submitted successfully.
     </div>
 
-    <form id="briefForm" action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST" enctype="multipart/form-data" autocomplete="off">
-      <!-- Improved hidden spam trap -->
-      <input name="_formsubmit_id" type="text" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;">
+    <form id="briefForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" enctype="multipart/form-data" autocomplete="off">
       
-      <!-- Redirect to same page with anchor -->
+      <!-- Honeypot field to prevent bots -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <!-- Optional redirect after submit -->
       <input type="hidden" name="_redirect" value="https://infiniteplus25.github.io/OD-FORM/#successMessage">
 
       <label for="name">Your Name*</label>
@@ -161,7 +161,8 @@ html>
       <label for="link">Landing Page or Store Link</label>
       <input type="text" id="link" name="link">
 
-      <label for="attachment">Upload Brief/Mockups</label>
+      <!-- ✅ Choose Image / File Upload -->
+      <label for="attachment">Choose Image or Document</label>
       <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
 
       <label for="notes">Special Notes or Instructions</label>
