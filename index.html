@@ -117,9 +117,10 @@
     </div>
 
     <form id="briefForm" action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST" enctype="multipart/form-data" autocomplete="off">
-      <!-- Improved hidden spam trap -->
-      <input name="_formsubmit_id" type="text" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;">
       
+      <!-- Updated honeypot field (anti-spam) -->
+      <input name="middle_name" type="text" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;">
+
       <!-- Redirect to same page with anchor -->
       <input type="hidden" name="_redirect" value="https://infiniteplus25.github.io/OD-FORM/#successMessage">
 
@@ -161,13 +162,16 @@
       <label for="link">Landing Page or Store Link</label>
       <input type="text" id="link" name="link">
 
+      <!-- Optional: File upload (commented out for now to reduce spam flagging) -->
+      <!--
       <label for="attachment">Upload Brief/Mockups</label>
       <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+      -->
 
       <label for="notes">Special Notes or Instructions</label>
       <textarea id="notes" name="notes" rows="4"></textarea>
 
-      <button type="submit">Submit Brief</button>
+      <button type="submit">Send Request</button>
     </form>
   </div>
 
