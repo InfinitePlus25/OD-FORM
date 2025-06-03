@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -107,6 +107,7 @@
 <body>
 
   <div class="form-container">
+    <!-- Logo Placeholder -->
     <img src="images/logo.png" alt="Company Logo" />
 
     <h2>mVAS Brief Request Form</h2>
@@ -116,11 +117,10 @@
     </div>
 
     <form id="briefForm" action="https://formsubmit.io/send/sheida.pourian@origin-data.com" method="POST" enctype="multipart/form-data" autocomplete="off">
-      
-      <!-- ✅ Correct honeypot field to avoid spam -->
+      <!-- Improved hidden spam trap -->
       <input name="_formsubmit_id" type="text" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;">
-
-      <!-- Redirect with anchor to show success message -->
+      
+      <!-- Redirect to same page with anchor -->
       <input type="hidden" name="_redirect" value="https://infiniteplus25.github.io/OD-FORM/#successMessage">
 
       <label for="name">Your Name*</label>
@@ -161,7 +161,6 @@
       <label for="link">Landing Page or Store Link</label>
       <input type="text" id="link" name="link">
 
-      <!-- ✅ File upload field restored -->
       <label for="attachment">Upload Brief/Mockups</label>
       <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
 
